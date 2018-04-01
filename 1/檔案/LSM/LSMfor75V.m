@@ -2,9 +2,9 @@
 clear;clc;
 x=load('no_motor.mat');
 x=x.buf;
-phi2=x(:,1)/180*pi;  % phi is rad
+phi1=x(:,1)/180*pi;  % phi is rad
 time=50;
-phi1 = phi2;
+
 head=28;
 tail=35;
 A=[head*head head 1;tail*tail tail 1;(tail+1)*(tail+1) (tail+1) 1];
@@ -44,15 +44,22 @@ rho5 = coe2(3)
 
 %for sigma1
 clear coe A C phidd phid phi time x i range
-x=load('PWM50.mat');
+x=load('PWM75.mat');
 x=x.buf;
 phi=x(:,1)/180*pi;  % phi is rad
 time=50
 thetad=x(:,2);  % rad/s
 %消除peak
 %%%%% 需調整
-head=45;
-tail=50;
+head=42;
+tail=47;
+A=[head*head head 1;tail*tail tail 1;(tail+1)*(tail+1) (tail+1) 1];
+coe=pinv(A)*[phi(head);phi(tail);phi(tail+1)];
+for i=head+1:tail-1
+    phi(i)=i*i*coe(1)+i*coe(2)+coe(3);
+end
+head=54;
+tail=59;
 A=[head*head head 1;tail*tail tail 1;(tail+1)*(tail+1) (tail+1) 1];
 coe=pinv(A)*[phi(head);phi(tail);phi(tail+1)];
 for i=head+1:tail-1
@@ -87,8 +94,8 @@ thetadd(length(thetad))=thetadd(end);
 thetadd=thetadd';
 
 %%%%% 需調整
-range=40:57;
-A=[thetadd(range) cos(phi(range)).*thetadd(range) -thetad(range) -24*ones(length(range), 1)];
+range=42:62;
+A=[thetadd(range) cos(phi(range)).*thetadd(range) -thetad(range) -35*ones(length(range), 1)];
 B=-1*phidd(range) - sigma4*phid(range) + sigma5*sin(phi(range));
 coe=pinv(A'*A)*A'*B;
 sigma1 = coe(1)
@@ -96,7 +103,7 @@ sigma2 = coe(2)
 sigma3 = coe(3)
 sigma6 = coe(4)
 
-C = [thetadd(range) thetad(range) -24*ones(length(range), 1)];
+C = [thetadd(range) thetad(range) -35*ones(length(range), 1)];
 D = (-phidd(range))+(-cos(phi(range)).*phidd(range))+(sin(2*phi(range)).*sec(phi(range)).*phid(range).*phid(range))+(phid(range));
 coe2=pinv(C'*C)*C'*D;
 rho1 = coe2(1)
