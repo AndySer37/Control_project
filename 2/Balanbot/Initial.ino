@@ -25,11 +25,12 @@ void Init()
   KA_P = 0, KA_I = 0, KA_D = 0;
   KP_P = 0, KP_I = 0, KP_D = 0;
   ANG_OFFSET = 0;
-  pos = 20;
+  pos = 0;
+  Et_wheel = 0;
   KA_P = 16;  //16
   KA_I = 120;   //120
   KA_D = 0.2; //0.2
-  KP_P = 2;   //2
+  KP_P = 1;   //2
   KP_I = 0;   //0.1
   KP_D = 0;   //0.0
   Et_total = 0;

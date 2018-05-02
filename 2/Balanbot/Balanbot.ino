@@ -45,7 +45,7 @@ uint8_t i2cData[14]; // Buffer for I2C data
 
 #define CPR 374.0 //count per round
 #define TIRE_RADIUS 3.45 //3.45cm
-
+double Et_wheel;
 int Speed_L,Speed_R;
 int pwm,pwm_l,pwm_r;
 int pwm_ll, pwm_rr;
@@ -77,8 +77,8 @@ bool First_Time = true;
 void setup() {
   
   Serial.begin(9600);
-  BTSerial.begin(38400); // NANO 沒辦法同時處理兩個BT UART傳輸  //bt1
-  //BTSerial2.begin(38400);   //bt2
+  //BTSerial.begin(38400); // NANO 沒辦法同時處理兩個BT UART傳輸  //bt1
+  BTSerial2.begin(38400);   //bt2
   Init();
   Wire.begin();
   TWBR = ((F_CPU / 400000L) - 16) / 2; // Set I2C frequency to 400kHz
@@ -157,12 +157,14 @@ void loop() {
       else if(AngleAvg < 45 || AngleAvg > -45){
         //PWM_Calculate();
         PWM_Cal();
+        //PWM_cal_by_angle();
         Car_Control();
       }
     }
-    SendData(250); //250ms     //bt1
-    ReceiveData(200); //200ms  //bt1
+    //SendData(250); //250ms     //bt1
+    //ReceiveData(200); //200ms  //bt1
 
-    //SendToPC(100);  //bt2
+    //SendToPC(50);  //bt2
+    SendToPC2(50);
   }
 }

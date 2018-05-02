@@ -9,7 +9,7 @@ void SendData(int interval_send) {
     //                                    + KP_P + String(";") + KP_I + String(";") + KP_D + String(";")
     //                                    + Angle_Car_Adjustment + String(";")
     //                                    + Speed_LR + String(";") + Angle_Car + String(";]");
-    String total_sending_text = String("[") + pos;
+    String total_sending_text = String("[pos=") + pos;
     char* buf = (char*)malloc(sizeof(char) * total_sending_text.length() + 1);
     total_sending_text.toCharArray(buf, total_sending_text.length() + 1);
     BTSerial.write(buf); //傳起始點給手機端

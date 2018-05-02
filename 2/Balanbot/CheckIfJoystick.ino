@@ -40,6 +40,15 @@ bool CheckIfJoystick()
     //Serial.println(Turn_Need);
 
     return true; //if joystick
+  } else if (str_receive[0] == 'p'&& str_receive[1] == 'o'&& str_receive[2] == 's') {
+    char* pos_cmd = (char*)malloc(5);
+    for (int i = 4 ; i < len_receive; i++){
+      pos_cmd[i-4] = str_receive[i];
+    }
+    pos = atof(pos_cmd);
+    free(pos_cmd);
+    Serial.print("Pos cmd = ");
+    Serial.print(pos_cmd);
   }
   else {
     bool change = false;

@@ -19,7 +19,14 @@ void ReceiveData(int interval_receive) {
         Serial.println(val);
         CheckIfJoystick();
         CheckIfPID();
-        Car_Control_bt();
+        //Car_Control_bt();
+        len_receive = 0;//歸零
+      }
+      else if(val == '['){
+        Serial.println(val);
+        CheckIfJoystick();
+        CheckIfPID();
+        //Car_Control_bt();
         len_receive = 0;//歸零
       }
       else {
