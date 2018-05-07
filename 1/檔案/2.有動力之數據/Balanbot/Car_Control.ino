@@ -28,8 +28,8 @@ void Car_Control()
 //    }
   if (1)//Angle_Car > 45 || Angle_Car < -45 )
   {
-    pwm_l = 50;
-    pwm_r = 50;
+    pwm_l = 28;
+    pwm_r = 28;
   }
     digitalWrite(DIR_L1, HIGH);
     digitalWrite(DIR_L2, LOW);
