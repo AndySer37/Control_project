@@ -66,7 +66,7 @@ void PWM_cal_by_angle()
   double deno =  abs(trun_Radius + car_half_distance) + abs(trun_Radius - car_half_distance);
 
   pos_L += (micros() - angle_dt) * Speed_L / 1000000;
-  pos_L += (trun_Radius + car_half_distance) * trun_direction / (deno * 20);
+  pos_L += (trun_Radius + trun_direction2 * car_half_distance) * trun_direction / (deno * 15);
   //Serial.println(pos);
   pt_L = -KP_P * pos_L;
   it_L = KP_I * (pos_itL);
@@ -74,15 +74,15 @@ void PWM_cal_by_angle()
   pos_itL += pos_L * (micros() - angle_dt) * 0.000001; //micros --> sec
 
   pos_R += (micros() - angle_dt) * Speed_R / 1000000;
-  pos_R += (trun_Radius - car_half_distance) * trun_direction / (deno * 20);
+  pos_R += (trun_Radius - trun_direction2 * car_half_distance) * trun_direction / (deno * 15);
   //Serial.println(pos);
   pt_R = -KP_P * pos_R;
   it_R = KP_I * (pos_itR);
   dt_R = KP_D * Speed_R;
   pos_itR += pos_R * (micros() - angle_dt) * 0.000001; //micros --> sec
 
-  double diff = (pt_L - pt_R) / 2;
-  double tempPos = (pt_L + pt_R) / 2;
+  double diff =  trun_direction2 * (pt_L - pt_R) / 2;
+  double tempPos = pt_R;
 
   Pt = -KA_P * (tempPos - Angle_Car);
   It = -KA_I * (Et_total);
@@ -106,8 +106,14 @@ void PWM_cal_by_angle()
   //Serial.println(pwm);
   //Serial.println(Et_total);
   //Speed_Need  //Turn_Need
-  pwm_r = pwm - temp2;
-  pwm_l = pwm + temp2;
+  if ( trun_direction2 == 1) {
+    pwm_r = pwm ;
+    pwm_l = pwm + 2* temp2;
+  }
+   else {
+    pwm_r = pwm + 2* temp2;
+    pwm_l = pwm ;
+  }
   if (pwm_r > 80)
     pwm_r = 80;
   else if (pwm_r < -80)

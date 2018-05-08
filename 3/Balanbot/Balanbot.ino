@@ -51,6 +51,7 @@ float Speed_L, Speed_R;
 int pwm, pwm_l, pwm_r;
 int pwm_ll, pwm_rr;
 int trun_direction;    //+1 OR -1
+int trun_direction2;    //+1 OR -1
 double Angle_Car, trun_Radius, car_half_distance; //車子傾斜角
 double Angle_Car_Adjustment;
 double Gyro_Car;
