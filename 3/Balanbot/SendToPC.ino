@@ -48,8 +48,8 @@ void SendToPC2(int interval_send)
       BTSerialData2 = String(Speed_R,2);
       BTSerialData3 = String(Speed_L,2);
       BTSerialData4 = String(pos,2);
-      BTSerialData5 = String(pos_R,2);
-      BTSerialData6 = String(pos_L,2);
+      BTSerialData5 = String(pwm,DEC);  //pos_R
+      BTSerialData6 = String(pos_L,2);  //pos_L
       //Serial.print(Angle_Car);Serial.print(" ");
       //Serial.print(Speed_R);Serial.print(" ");
       //Serial.println(Speed_L);

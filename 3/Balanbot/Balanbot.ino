@@ -51,12 +51,12 @@ float Speed_L, Speed_R;
 int pwm, pwm_l, pwm_r;
 int pwm_ll, pwm_rr;
 int trun_direction;    //+1 OR -1
-double Angle_Car,trun_Radius,car_half_distance; //車子傾斜角
+double Angle_Car, trun_Radius, car_half_distance; //車子傾斜角
 double Angle_Car_Adjustment;
 double Gyro_Car;
 double Gyro_Car_Adjustment;
 float Speed_LR;
-float pos, pos_L , pos_R ;
+float pos, pos_L , pos_R ,pos_count;
 double KA_P, KA_I, KA_D;
 double KP_P, KP_I, KP_D;
 double ANG_OFFSET;
@@ -64,7 +64,7 @@ double Et_total, pos_it, Et_turn, pos_itL, pos_itR;
 
 float Speed_Need, Turn_Need;
 int Speed_Diff, Speed_Diff_ALL;
-
+int state;
 uint32_t angle_dt;
 uint32_t SendTimer;
 uint32_t ReceiveTimer;
@@ -79,8 +79,8 @@ bool First_Time = true;
 void setup() {
 
   Serial.begin(9600);
-  //BTSerial.begin(38400); // NANO 沒辦法同時處理兩個BT UART傳輸  //bt1
-  BTSerial2.begin(38400);   //bt2
+  BTSerial.begin(38400); // NANO 沒辦法同時處理兩個BT UART傳輸  //bt1
+  //BTSerial2.begin(38400);   //bt2
   Init();
   Wire.begin();
   TWBR = ((F_CPU / 400000L) - 16) / 2; // Set I2C frequency to 400kHz
@@ -158,15 +158,20 @@ void loop() {
       }
       else if (AngleAvg < 45 || AngleAvg > -45) {
         //PWM_Calculate();
-        //PWM_Cal();
-        PWM_cal_by_angle();
+        if (state == 0 )
+          PWM_Cal();
+         else if (state == 1)
+          PWM_cal_by_angle();
+        
         Car_Control();
       }
+  
     }
-    //SendData(250); //250ms     //bt1
-    //ReceiveData(200); //200ms  //bt1
+    Serial.println(Et_total);
+    SendData(250); //250ms     //bt1
+    ReceiveData(200); //200ms  //bt1
 
     //SendToPC(50);  //bt2
-    SendToPC2(50);
+    //SendToPC2(50);
   }
 }
