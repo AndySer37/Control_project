@@ -29,7 +29,7 @@ void PWM_Cal()
   Pt = -KA_P * (tempPos - Angle_Car);
   It = -KA_I * (Et_total);
   Dt = KA_D * Gyro_Car;
-  Et_total += (0.2 * tempPos - Angle_Car) * (micros() - angle_dt) * 0.000001; //micros --> sec
+  Et_total += (0.1 * tempPos - Angle_Car) * (micros() - angle_dt) * 0.000001; //micros --> sec
   if (Et_total > 2)
     Et_total = 2;
   else if (Et_total < -2)
