@@ -108,10 +108,10 @@ void PWM_cal_by_angle()
   //Speed_Need  //Turn_Need
   if ( trun_direction2 == 1) {
     pwm_r = pwm ;
-    pwm_l = pwm + 2 * temp2;
+    pwm_l = pwm + 2* temp2;
   }
-  else {
-    pwm_r = pwm + 2 * temp2;
+   else {
+    pwm_r = pwm + 2* temp2;
     pwm_l = pwm ;
   }
   if (pwm_r > 80)
