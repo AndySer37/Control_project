@@ -1,6 +1,8 @@
-void Car_Control()
-{
+void Car_Control_bt()
+{  
   digitalWrite(STBY, HIGH);
+  pwm_l -= Speed_Need*Turn_Need;
+  pwm_r -= Speed_Need*Turn_Need;
   pwm_ll = pwm_l;
   pwm_rr = pwm_r;
   if (pwm_l<0)

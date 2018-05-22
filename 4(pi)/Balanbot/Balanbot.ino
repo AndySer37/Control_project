@@ -166,7 +166,7 @@ void loop() {
         
         Car_Control();
       }
-      
+  
     }
     Serial.println(Et_total);
     SendData(250); //250ms     //bt1

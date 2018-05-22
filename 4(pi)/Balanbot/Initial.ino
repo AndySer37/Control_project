@@ -13,10 +13,10 @@ void Init()
   //initial variables
   car_half_distance = 8;
   trun_Radius = 8;
-  trun_direction = 1; // 1前 -1後
+  trun_direction = 1;// 1前-1後
   trun_direction2 = 1;// 1右 -1左
   pos_count = 0;
-  state = 0;
+  state = 1;
 
   Speed_L = 0;
   Speed_R = 0;
@@ -37,8 +37,8 @@ void Init()
   pos = 0;
   Et_wheel = 0;
   Et_turn = 0;
-  KA_P = 16;   //16 / 18
-  KA_I = 140;   //120 / 155
+  KA_P = 18;   //16 / 18
+  KA_I = 155;   //120 / 155
   KA_D = 0.2; //0.2 / 0.2 
   KP_P = 1.5;   //2 /1.5
   KP_I = 0;   //0.1
