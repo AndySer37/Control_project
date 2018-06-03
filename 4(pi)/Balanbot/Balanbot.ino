@@ -130,6 +130,7 @@ void setup() {
   ReceiveTimer = millis();
   SendToPCTimer = millis();
   SpeedTimer = millis();
+  piTimer = millis();
 }
 
 void loop() {

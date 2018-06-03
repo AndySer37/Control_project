@@ -168,7 +168,7 @@ void loop() {
       }
       
     }
-    Serial.println(Et_total);
+   // Serial.println(Et_total);
     SendData(250); //250ms     //bt1
     ReceiveData(200); //200ms  //bt1
 

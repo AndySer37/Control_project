@@ -11,15 +11,30 @@
 
 
 #include <Wire.h>
-
+#include <time.h>
+char pi_data;
+uint32_t piTimer;
 void setup() {
-  Wire.begin(0x04);                // join i2c bus with address #8
+  Wire.begin();                // join i2c bus with address #8
   Wire.onReceive(receiveEvent); // register event
   Serial.begin(9600);           // start serial for output
+  piTimer=millis();
 }
 
 void loop() {
-  delay(100);
+    if ((millis() - piTimer) > 2000) {
+    Wire.beginTransmission(9); // transmit to device #9
+    Wire.write(millis());           // sends 16 bytes
+    Serial.println(millis());
+    Wire.requestFrom(9, 8);
+    if (Wire.available()) {
+      pi_data = Wire.read();
+    }
+    Wire.endTransmission();    // stop transmitting
+//    control(pi_data);
+    Serial.println(pi_data);
+    piTimer=millis();
+  }
 }
 
 // function that executes whenever data is received from master
