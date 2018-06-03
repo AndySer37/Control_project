@@ -16,7 +16,7 @@ void PWM_Cal()
   double temp;
   double Pt = 0, It = 0, Dt = 0;
   double pt = 0, it = 0, dt = 0;
-
+  
   pos += (micros() - angle_dt) * Speed_LR / 1000000;
   pos += pos_count;
   //Serial.println(pos);
@@ -25,11 +25,12 @@ void PWM_Cal()
   dt = KP_D * Speed_LR;
   pos_it += pos * (micros() - angle_dt) * 0.000001; //micros --> sec
   double tempPos = pt;
-
+Serial.println(Angle_Car);
   Pt = -KA_P * (tempPos - Angle_Car);
   It = -KA_I * (Et_total);
   Dt = KA_D * Gyro_Car;
   Et_total += (0.2 * tempPos - Angle_Car) * (micros() - angle_dt) * 0.000001; //micros --> sec
+ // Et_total += (- Angle_Car) * (micros() - angle_dt) * 0.000001; //micros --> sec
   if (Et_total > 2)
     Et_total = 2;
   else if (Et_total < -2)
@@ -63,14 +64,14 @@ void PWM_Cal()
 
   pwm_r = pwm   + temp2;
   pwm_l = pwm   - temp2;
-  if (pwm_r > 80)
-    pwm_r = 80;
-  else if (pwm_r < -80)
-    pwm_r = -80;
-  if (pwm_l > 80)
-    pwm_l = 80;
-  else if (pwm_l < -80)
-    pwm_l = -80;
+  if (pwm_r > 160)
+    pwm_r = 160;
+  else if (pwm_r < -160)
+    pwm_r = -160;
+  if (pwm_l > 160)
+    pwm_l = 160;
+  else if (pwm_l < -160)
+    pwm_l = -160;
   angle_dt = micros();
   SpeedTimer = millis();
 }

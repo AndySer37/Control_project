@@ -32,8 +32,10 @@ void ReceiveData(int interval_receive) {
       else if (val == '+') {
         if (state == 1) {
           pos = (pos_L + pos_R ) / 2, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
-          KA_P = 16;   
-          KA_I = 140;
+          KA_P = 17;
+          KA_I = 130;
+          KA_D = 0.3;
+          KP_P = 1.3;
         }
         else if (state == 0) {
           pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
@@ -44,8 +46,10 @@ void ReceiveData(int interval_receive) {
       else if (val == '-') {
         if (state == 1) {
           pos = (pos_L + pos_R ) / 2, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
-          KA_P = 16;   
-          KA_I = 140;
+          KA_P = 17;
+          KA_I = 130;
+          KA_D = 0.3;
+          KP_P = 1.3;
         }
         else if (state == 0) {
           pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
@@ -59,8 +63,10 @@ void ReceiveData(int interval_receive) {
         }
         else if (state == 0) {
           pos_it = 0, pos_L = pos, pos_R = pos, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
-          KA_P = 18;   
-          KA_I = 155;
+          KA_P = 14;  
+          KA_I = 110;   
+          KA_D = 0.2; 
+          KP_P = 1.5;
         }
         state = 1;
         //trun_Radius = -8;
@@ -72,8 +78,10 @@ void ReceiveData(int interval_receive) {
         }
         else if (state == 0) {
           pos_it = 0, pos_L = pos, pos_R = pos, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
-          KA_P = 18;   
-          KA_I = 155;
+          KA_P = 14;  
+          KA_I = 110;   
+          KA_D = 0.2; 
+          KP_P = 1.5;
         }
         state = 1;
         //trun_Radius = 8;
@@ -82,8 +90,10 @@ void ReceiveData(int interval_receive) {
       else if (val == 'S') {
         if (state == 1) {
           pos = (pos_L + pos_R ) / 2, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
-          KA_P = 16;   
-          KA_I = 140;
+          KA_P = 17;
+          KA_I = 130;
+          KA_D = 0.3;
+          KP_P = 1.3;
         }
         else if (state == 0) {
           pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
@@ -96,40 +106,97 @@ void ReceiveData(int interval_receive) {
       }
     }
   }
-  if(1)
-  {
-    Wire.begin(0x04);                // join i2c bus with address #8
-    Wire.onRequest(requestEvent); // register event
-    Wire.onReceive(receiveEvent);
-
-    
-  }
-}
-
-/*void receiveEvent(int howMany) {
-  while (1 < Wire.available()) { // loop through all but the last
-    char c = Wire.read(); // receive byte as a character
-    if(c=='s'){
-       if (state == 1) {
-          pos = (pos_L + pos_R ) / 2, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
-        }
-        else if (state == 0) {
-          pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
-        }
-        state = 0;
-        pos_count = 0;
+  if ((millis() - piTimer) > 500) {
+    Wire.beginTransmission(9); // transmit to device #9
+    Wire.write(1);           // sends 16 bytes
+    Serial.println(millis());
+    Wire.requestFrom(9, 24);
+    if (Wire.available()) {
+      pi_data[0] = Wire.read();
+      pi_data[1] = Wire.read();
+      pi_data[2] = Wire.read();
     }
+    Wire.endTransmission();    // stop transmitting
+    //control(pi_data); 
+    Serial.print(pi_data[0]);
+    Serial.print(pi_data[1]);
+    Serial.println(pi_data[2]);
+    piTimer=millis();
   }
-}*/
-void receiveEvent(int howMany) {
-  while (1 < Wire.available()) { // loop through all but the last
-    char c = Wire.read(); // receive byte as a character
-    Serial.print(c);         // print the character
-  }
-  int x = Wire.read();    // receive byte as an integer
-  Serial.println(x);         // print the integer
 }
-void requestEvent() {
-  Wire.write(9); // respond with message of 6 bytes
-  // as expected by master
+
+void control(char val)
+{
+  if (val == '+') {
+    if (state == 1) {
+      pos = (pos_L + pos_R ) / 2, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+      KA_P = 17;
+      KA_I = 130;
+      KA_D = 0.3;
+      KP_P = 1.3;
+    }
+    else if (state == 0) {
+      pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+    }
+    state = 0;
+    pos_count = 0.15;
+  }
+  else if (val == '-') {
+    if (state == 1) {
+      pos = (pos_L + pos_R ) / 2, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+      KA_P = 17;
+      KA_I = 130;
+      KA_D = 0.3;
+      KP_P = 1.3;
+    }
+    else if (state == 0) {
+      pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+    }
+    state = 0;
+    pos_count = -0.15;
+  }
+  else if (val == 'R') {
+    if (state == 1) {
+      pos_it = 0, pos_itL = 0, pos_itR = 0, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+    }
+    else if (state == 0) {
+      pos_it = 0, pos_L = pos, pos_R = pos, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+      KA_P = 14;  
+      KA_I = 110;   
+      KA_D = 0.2; 
+      KP_P = 1.5;
+    }
+    state = 1;
+    //trun_Radius = -8;
+    trun_direction2 = -1;
+  }
+  else if (val == 'L') {
+    if (state == 1) {
+      pos_it = 0, pos_itL = 0, pos_itR = 0, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+    }
+    else if (state == 0) {
+      pos_it = 0, pos_L = pos, pos_R = pos, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+      KA_P = 14;  
+      KA_I = 110;   
+      KA_D = 0.2; 
+      KP_P = 1.5;
+    }
+    state = 1;
+    //trun_Radius = 8;
+    trun_direction2 = 1;
+  }
+  else if (val == 'S') {
+    if (state == 1) {
+      pos = (pos_L + pos_R ) / 2, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+      KA_P = 17;
+      KA_I = 130;
+      KA_D = 0.3;
+      KP_P = 1.3;
+    }
+    else if (state == 0) {
+      pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+    }
+    state = 0;
+    pos_count = 0;
+  }
 }

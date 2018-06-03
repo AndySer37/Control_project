@@ -28,6 +28,7 @@ double kalAngleX, kalAngleY; // Calculated angle using a Kalman filter
 
 uint32_t timer;
 uint8_t i2cData[14]; // Buffer for I2C data
+bool gryoConnecting=false;
 
 //motor  define
 #define PWM_L 10  //PWMA
@@ -71,34 +72,33 @@ uint32_t SendTimer;
 uint32_t ReceiveTimer;
 uint32_t SendToPCTimer;
 uint32_t SpeedTimer;
-
+uint32_t piTimer;
 int encoderPosL, encoderPosR;
 int encoderR_past, encoderL_past;
 
 bool First_Time = true;
 
-void setup() {
+char pi_data[3];
 
+void setup() {
+  //Wire.onRequest(requestEvent); // register event
+  //Wire.onReceive(receiveEvent);
   Serial.begin(9600);
   BTSerial.begin(38400); // NANO 沒辦法同時處理兩個BT UART傳輸  //bt1
   //BTSerial2.begin(38400);   //bt2
   Init();
   Wire.begin();
   TWBR = ((F_CPU / 400000L) - 16) / 2; // Set I2C frequency to 400kHz
-
   while (i2cWrite(0x19, i2cData, 4, false)); // Write to all four registers at once
   while (i2cWrite(0x6B, 0x01, true)); // PLL with X axis gyroscope reference and disable sleep mode
   while (i2cRead(0x75, i2cData, 1));
-
   if (i2cData[0] != 0x68) { // Read "WHO_AM_I" register
     Serial.print(F("Error reading sensor"));
     while (1);
   }
   delay(200); // Wait for sensor to stabilize
-
   /* Set kalman and gyro starting angle */
   while (i2cRead(0x3B, i2cData, 6));
-
   accX = (i2cData[0] << 8) | i2cData[1];
   accY = (i2cData[2] << 8) | i2cData[3];
   accZ = (i2cData[4] << 8) | i2cData[5];
@@ -144,6 +144,7 @@ void loop() {
   {
     if (UpdateAttitude())
     {
+      //Wire.begin(0x04);
       DataAvg[2] = DataAvg[1];
       DataAvg[1] = DataAvg[0];
       DataAvg[0] = Angle_Car;
@@ -169,7 +170,8 @@ void loop() {
       }
   
     }
-    Serial.println(Et_total);
+    
+    //Serial.println(Et_total);
     SendData(250); //250ms     //bt1
     ReceiveData(200); //200ms  //bt1
 

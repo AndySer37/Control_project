@@ -87,7 +87,7 @@ void PWM_cal_by_angle()
   Pt = -KA_P * (tempPos - Angle_Car);
   It = -KA_I * (Et_total);
   Dt = KA_D * Gyro_Car;
-  Et_total += (0.1 * tempPos - Angle_Car) * (micros() - angle_dt) * 0.000001; //micros --> sec
+  Et_total += (0.2 * tempPos - Angle_Car) * (micros() - angle_dt) * 0.000001; //micros --> sec
 
   double P_wheel = 0, I_wheel = 0;
   //Et_turn += (diff * 2 / (-KP_P) - car_half_distance * trun_direction / (deno * 10)) * (micros() - angle_dt) * 0.000001;
@@ -114,12 +114,12 @@ void PWM_cal_by_angle()
     pwm_r = pwm + 2* temp2;
     pwm_l = pwm ;
   }
-  if (pwm_r > 80)
-    pwm_r = 80;
-  else if (pwm_r < -80)
-    pwm_r = -80;
-  if (pwm_l > 80)
-    pwm_l = 80;
-  else if (pwm_l < -80)
-    pwm_l = -80;
+  if (pwm_r > 160)
+    pwm_r = 160;
+  else if (pwm_r < -160)
+    pwm_r = -160;
+  if (pwm_l > 160)
+    pwm_l = 160;
+  else if (pwm_l < -160)
+    pwm_l = -160;
 }

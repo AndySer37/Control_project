@@ -3,7 +3,9 @@ int UpdateAttitude()  //Update Status
   if((micros() - timer) >= 10000) //dt = 10ms,but it has some delay 600us.
   {
     /* Update all the MPU6050 values */
+    gryoConnecting=true;
     while (i2cRead(0x3B, i2cData, 14));
+    gryoConnecting=false;
     accX = (i2cData[0] << 8) | i2cData[1];
     accY = (i2cData[2] << 8) | i2cData[3];
     accZ = (i2cData[4] << 8) | i2cData[5];
