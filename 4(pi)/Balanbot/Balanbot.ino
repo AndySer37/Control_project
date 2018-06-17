@@ -63,6 +63,8 @@ double KA_P, KA_I, KA_D;
 double KP_P, KP_I, KP_D;
 double ANG_OFFSET;
 double Et_total, pos_it, Et_turn, pos_itL, pos_itR;
+double distance;
+
 
 float Speed_Need, Turn_Need;
 int Speed_Diff, Speed_Diff_ALL;

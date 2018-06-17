@@ -19,13 +19,18 @@ void PWM_Cal()
   
   pos += (micros() - angle_dt) * Speed_LR / 1000000;
   pos += pos_count;
+  distance++;
+  if(distance>400)
+  {
+    pos_count=0;
+  }
   //Serial.println(pos);
   pt = -KP_P * pos;
   it = KP_I * (pos_it);
   dt = KP_D * Speed_LR;
   pos_it += pos * (micros() - angle_dt) * 0.000001; //micros --> sec
   double tempPos = pt;
-Serial.println(Angle_Car);
+//Serial.println(Angle_Car);
   Pt = -KA_P * (tempPos - Angle_Car);
   It = -KA_I * (Et_total);
   Dt = KA_D * Gyro_Car;

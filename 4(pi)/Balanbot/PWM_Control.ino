@@ -58,6 +58,11 @@ void PWM_cal_by_angle()
   Speed_Diff = Speed_L - Speed_R;
   Speed_Diff_ALL += Speed_Diff;
 
+  distance++;
+  if(distance>400)
+  {
+    trun_direction=-1;
+  }
 
   double temp;
   double Pt = 0, It = 0, Dt = 0;
