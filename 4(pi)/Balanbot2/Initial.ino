@@ -15,9 +15,9 @@ void Init()
   trun_Radius = 8;
   trun_direction = 1;// 1前-1後
   trun_direction2 = 1;// 1右 -1左
-  pos_count = 0.08;
+  pos_count = 0;
   state = 0;//0前進 1轉彎
-  countPos=0;
+  path=0;
   
   Speed_L = 0;
   Speed_R = 0;
