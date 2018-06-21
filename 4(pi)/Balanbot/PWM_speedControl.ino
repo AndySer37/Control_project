@@ -19,6 +19,11 @@ void PWM_Cal()
   
   pos += (micros() - angle_dt) * Speed_LR / 1000000;
   pos += pos_count;
+  distance++;
+  if(distance>400)
+  {
+    pos_count=0;
+  }
   //Serial.println(pos);
   countPos++;
   if(countPos==10)

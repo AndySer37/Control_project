@@ -12,13 +12,18 @@ void Init()
 
   //initial variables
   car_half_distance = 8;
-  trun_Radius = 8;
+  trun_Radius = 10;
   trun_direction = 1;// 1前-1後
   trun_direction2 = 1;// 1右 -1左
   pos_count = 0.08;
   state = 0;//0前進 1轉彎
+<<<<<<< HEAD
+  distance=0;
+
+=======
   countPos=0;
   
+>>>>>>> 3be30df8e64d5e1b30c8637e29b4fafc0ec9d530
   Speed_L = 0;
   Speed_R = 0;
   Speed_LR = 0;

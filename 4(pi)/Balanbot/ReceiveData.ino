@@ -42,7 +42,8 @@ void ReceiveData(int interval_receive) {
           pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
         }
         state = 0;
-        pos_count = 0.15;
+         distance=0;
+        pos_count = 0.08;
       }
       else if (val == '-') {
         if (state == 1) {
@@ -69,6 +70,7 @@ void ReceiveData(int interval_receive) {
           KA_D = 0.2; 
           KP_P = 1.5;
         }
+         distance=0;
         state = 1;
         //trun_Radius = -8;
         trun_direction2 = -1;
@@ -121,7 +123,12 @@ void ReceiveData(int interval_receive) {
      pi_data[0]=1;
     Wire.beginTransmission(9); // transmit to device #9
     Wire.write(1);           // sends 16 bytes
+<<<<<<< HEAD
+    //Serial.println(millis());
+    Wire.requestFrom(9, 24);
+=======
     Wire.requestFrom(9, 8);//address and bytes
+>>>>>>> 3be30df8e64d5e1b30c8637e29b4fafc0ec9d530
     if (Wire.available()) {
       pi_data[0] = Wire.read();
       //pi_data[1] = Wire.read();
@@ -153,6 +160,10 @@ void control(char val)
       pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
     }
     state = 0;
+<<<<<<< HEAD
+    distance=0;
+=======
+>>>>>>> 3be30df8e64d5e1b30c8637e29b4fafc0ec9d530
     pos_count = 0.08;
   }
   else if (val == '-') {

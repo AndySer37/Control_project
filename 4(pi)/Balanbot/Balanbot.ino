@@ -62,7 +62,13 @@ float pos, pos_L , pos_R ,pos_count;
 double KA_P, KA_I, KA_D;
 double KP_P, KP_I, KP_D;
 double ANG_OFFSET;
+<<<<<<< HEAD
+double Et_total, pos_it, Et_turn, pos_itL, pos_itR;
+double distance;
+
+=======
 double Et_total, pos_it, Et_turn, pos_itL, pos_itR,tempPos;
+>>>>>>> 3be30df8e64d5e1b30c8637e29b4fafc0ec9d530
 
 float Speed_Need, Turn_Need;
 int Speed_Diff, Speed_Diff_ALL;
