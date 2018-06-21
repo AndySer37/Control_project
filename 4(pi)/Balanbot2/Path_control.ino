@@ -2,7 +2,7 @@ void Path_control()
 {
    path++;
   if(path==1){  
-      control('s');
+      control('S');
       PWM_Cal();
    }
    else if(path<300)

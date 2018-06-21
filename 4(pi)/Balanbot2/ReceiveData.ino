@@ -32,7 +32,11 @@ void ReceiveData(int interval_receive) {
       }
       else if (val == '+') {
         if (state == 1) {
+<<<<<<< HEAD
+          pos =(pos_L + pos_R ) / 2, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //pos = tempPos /-17,Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+=======
           pos =tempPos /-17, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //pos = (pos_L + pos_R ) / 2,pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+>>>>>>> 496fa85a95e427b349f6a9bc78efd52d1f1be7d3
           KA_P = 17;
           Et_total = 0;
           KA_I = 130;
@@ -47,7 +51,7 @@ void ReceiveData(int interval_receive) {
       }
       else if (val == '-') {
         if (state == 1) {
-         pos =tempPos /-17, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+        pos =(pos_L + pos_R ) / 2, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
           KA_P = 17;
           Et_total = 0;
           KA_I = 130;
@@ -92,7 +96,11 @@ void ReceiveData(int interval_receive) {
       }
       else if (val == 'S') {
         if (state == 1) {
+<<<<<<< HEAD
+          pos =(pos_L + pos_R ) / 2, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+=======
           pos =tempPos /-17, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; Et_total = 0;//pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+>>>>>>> 496fa85a95e427b349f6a9bc78efd52d1f1be7d3
           KA_P = 17;
           KA_I = 130;
           KA_D = 0.3;

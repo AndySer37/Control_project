@@ -168,7 +168,11 @@ void loop() {
           PWM_Cal();
          else if (state == 1)
           PWM_cal_by_angle();
+<<<<<<< HEAD
+       //Path_control();
+=======
           //Path_control();
+>>>>>>> 496fa85a95e427b349f6a9bc78efd52d1f1be7d3
         Car_Control();
       }
   
