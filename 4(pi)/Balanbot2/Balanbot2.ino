@@ -164,11 +164,11 @@ void loop() {
       }
       else if (AngleAvg < 45 || AngleAvg > -45) {
         //PWM_Calculate();
-       /* if (state == 0 )
+        if (state == 0 )
           PWM_Cal();
          else if (state == 1)
-          PWM_cal_by_angle();*/
-          Path_control();
+          PWM_cal_by_angle();
+       //Path_control();
         Car_Control();
       }
   
