@@ -1,65 +1,46 @@
 void Path_control()
 {
-   path++;
-  if(path==1){  
-      control('S');
-      PWM_Cal();
-   }
-   else if(path<300)
-      PWM_Cal();
-   else if(path==300){
-      control('+');
-      PWM_Cal();
-   }
-   else if(path>300&&path<500)
-      PWM_Cal();
-      
-   else if(path==500){
-      control('S');
-      PWM_Cal();
-   }
-   else if(path>500&&path<550)
-      PWM_Cal();
-    
-   else if(path==550){
-      control('R');
-      PWM_cal_by_angle();
-   }
-   else if(path>550&&path<950)
-      PWM_cal_by_angle();
+  path++;
+  //1300//475//4150 
+  if (path == 1)
+    control('S');
+  else if (path == 500)
+    control('+');
+  else if (path == 1800)
+    control('S');
+  else if (path == 2000)
+    control('l');
+  else if (path == 2475)
+    control('S');
+  else if (path == 2975)
+    control('+');
+  else if (path == 4275)
+    control('S');
+  else if (path == 4475)
+    control('l');
+  else if (path == 4950)
+    control('S');
+  else if (path == 5450)
+    control('+');
+  else if (path == 6100)
+    control('S');
+  else if (path == 6300) 
+    control('r');
+  else if (path == 6775)
+    control('S');
+  else if (path == 7275)
+    control('+');
+  else if (path == 7925)
+    control('S');
+  else if (path == 8125)
+    control('r');
+  else if (path == 8600)
+    control('S');
+  else if (path == 9100) 
+    control('R');
+  else if (path == 13250)
+    control('S');
 
-   else if(path==950){
-      control('S');
-      PWM_Cal();
-   }
-   else if(path>950&&path<1000)
-      PWM_Cal();
-   
-   else if(path==1000){
-      control('+');
-      PWM_Cal();
-   }
-   else if(path>1000&&path<1200)
-      PWM_Cal();
-  
-   else if(path==1200){
-      control('S');
-      PWM_Cal();
-   }
-   else if(path>1200&&path<1250)
-      PWM_Cal();
-      
-   else if(path==1250){
-      control('l');
-      PWM_cal_by_angle();
-   }
-   else if(path>1250&&path<2050)
-      PWM_cal_by_angle();
-      
-   else if(path==2050){
-      control('S');
-      PWM_Cal();
-   }
-   else
-      PWM_Cal();
+ */
+
 }

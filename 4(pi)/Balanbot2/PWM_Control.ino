@@ -29,8 +29,7 @@ void PWM_Calculate()
 
   temp = Pt + It + Dt;
   pwm = int(temp);
-  //Serial.println(pwm);
-  //Serial.println(Et_total);
+
   //Speed_Need  //Turn_Need
   pwm_r = pwm;
   pwm_l = pwm ;
@@ -103,15 +102,14 @@ void PWM_cal_by_angle()
 
   temp = Pt + It + Dt;
   pwm = int(temp);
-  //Serial.println(pwm);
-  //Serial.println(Et_total);
+
   //Speed_Need  //Turn_Need
   if ( trun_direction2 == 1) {
     pwm_r = pwm ;
-    pwm_l = pwm + 2* temp2;
+    pwm_l = pwm + 2 * temp2;
   }
-   else {
-    pwm_r = pwm + 2* temp2;
+  else {
+    pwm_r = pwm + 2 * temp2;
     pwm_l = pwm ;
   }
   if (pwm_r > 160)

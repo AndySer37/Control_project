@@ -1,4 +1,4 @@
- #include <SoftwareSerial.h>
+#include <SoftwareSerial.h>
 #include <Wire.h>
 #include <math.h>
 #include "Kalman.h"
@@ -28,7 +28,6 @@ double kalAngleX, kalAngleY; // Calculated angle using a Kalman filter
 
 uint32_t timer;
 uint8_t i2cData[14]; // Buffer for I2C data
-bool gryoConnecting=false;
 
 //motor  define
 #define PWM_L 10  //PWMA
@@ -58,11 +57,11 @@ double Angle_Car_Adjustment;
 double Gyro_Car;
 double Gyro_Car_Adjustment;
 float Speed_LR;
-float pos, pos_L , pos_R ,pos_count;
+float pos, pos_L , pos_R , pos_count;
 double KA_P, KA_I, KA_D;
 double KP_P, KP_I, KP_D;
 double ANG_OFFSET;
-double Et_total, pos_it, Et_turn, pos_itL, pos_itR,tempPos;
+double Et_total, pos_it, Et_turn, pos_itL, pos_itR, tempPos;
 
 float Speed_Need, Turn_Need;
 int Speed_Diff, Speed_Diff_ALL;
@@ -163,18 +162,17 @@ void loop() {
         First_Time = false;
       }
       else if (AngleAvg < 45 || AngleAvg > -45) {
-        //PWM_Calculate();
-        if (state == 0 )
-          PWM_Cal();
-         else if (state == 1)
-          PWM_cal_by_angle();
-       //Path_control();
+        //PWM_Calculate(); 
+        Path_control();
+         if (state == 0 )
+           PWM_Cal();
+          else if (state == 1)
+           PWM_cal_by_angle();
+       
         Car_Control();
       }
-  
+
     }
-    
-    //Serial.println(Et_total);
     SendData(250); //250ms     //bt1
     ReceiveData(200); //200ms  //bt1
 
