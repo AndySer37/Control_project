@@ -54,4 +54,5 @@ void Init()
   i2cData[1] = 0x00; // Disable FSYNC and set 260 Hz Acc filtering, 256 Hz Gyro filtering, 8 KHz sampling
   i2cData[2] = 0x00; // Set Gyro Full Scale Range to ±250deg/s
   i2cData[3] = 0x00; // Set Accelerometer Full Scale Range to ±2g
+  pi_data[1]='p';
 }
