@@ -1,0 +1,389 @@
+[§W§» 02:42:14]  
+[§W§» 02:42:14]  BEGIN AdapterGlobalDPI
+[§W§» 02:42:14]      AdapterGlobalDPI: DPI=120
+[§W§» 02:42:14]  END AdapterGlobalDPI
+[§W§» 02:42:14]  
+[§W§» 02:42:14]  BEGIN AddMobaConsoleFont
+[§W§» 02:42:14]  END AddMobaConsoleFont
+[02:42.14.762]  - MobaXterm version: 10.5 Build 3582
+[02:42.14.763]  - Command line: "C:\Users\¨f∞•\Desktop\control\MobaXterm_Personal_10.5.exe"
+[02:42.14.763]  - Win32 version: 6.3.2.9600.
+[02:42.14.763]  - Detected DPI: 120
+[02:42.14.763]  - Current DPI: 120
+[02:42.14.763]  - CurDir: C:\Users\¨f∞•\Desktop\control\
+[02:42.14.763]  - PersonalDir: C:\Users\¨f∞•\DOCUME~1\
+[02:42.14.763]  - AppDataDir: C:\Users\¨f∞•\AppData\Roaming\
+[02:42.14.763]  - LocalAppDataDir: C:\Users\¨f∞•\AppData\Roaming\
+[02:42.14.763]  - DesktopDir: C:\Users\¨f∞•\Desktop\
+[02:42.14.763]  - MobaProfileDir: C:\Users\¨f∞•\DOCUME~1\
+[02:42.14.763]  - Free space in MobaProfileDir folder: 26562MB
+[02:42.14.763]  - TempDir: C:\Users\¨f∞•\AppData\Local\Temp\
+[02:42.14.764]  - Free space in TempDir folder: 26562MB
+[02:42.14.764]  - Monitor #0: 1920x1080
+[02:42.14.764]  - User name: f
+[02:42.14.764]  - Computer name: ANDYSER
+[02:42.14.764]  - CygUtils: NOT PRESENT
+[02:42.14.764]  - Uptime: 5 days, 04:27:02
+[02:42.14.764]  - Windows PATH: C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Acer\abFiles\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\matlab\runtime\win64;D:\matlab\bin;D:\matlab_\runtime\win64;D:\matlab_\bin;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Users\¨f∞•\AppData\Local\GitHubDesktop\bin
+[02:42.14.764]  
+[02:42.14.764]  BEGIN Form1.FormCreate
+[02:42.14.764]      Detecting installed/portable version
+[02:42.14.764]      --> portable version
+[02:42.14.764]      
+[02:42.14.764]      Detecting IniSettings
+[02:42.14.764]      MobaXterm will take its configuration from file "C:\Users\¨f∞•\Desktop\control\MobaXterm.ini".
+[02:42.14.765]      (selected ini file seems to be writeable)
+[02:42.14.765]      --> IniSettings= C:\Users\¨f∞•\Desktop\control\MobaXterm.ini
+[02:42.14.765]      
+[02:42.14.765]      Detecting MobaXVTDir
+[02:42.14.765]      BEGIN IsFolderRW(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105)
+[02:42.14.766]          CreateSymbolicLink(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\drives, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\cygdrive);
+[02:42.14.768]          CreateSymbolicLink(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\drives, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\mnt);
+[02:42.14.770]          CreateSymbolicLink(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\drives, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\media);
+[02:42.14.772]          CreateSymbolicLink(/proc/registry, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\registry);
+[02:42.14.779]      END IsFolderRW(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105) --> OK
+[02:42.14.779]      --> MobaXVTDir= C:\Users\¨f∞•\AppData\Local\Temp\Mxt105
+[02:42.14.779]      
+[02:42.14.779]      Detecting BinExeDir
+[02:42.14.779]      --> BinExeDir= C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\
+[02:42.14.780]      --> SessionsDir= C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\tmp\sessions
+[02:42.14.780]      
+[02:42.14.780]      Detecting MobaXVTHomeDir
+[02:42.14.780]      --> MobaXVTHomeDir= C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\tmp\home_f
+[02:42.14.780]      
+[02:42.14.780]      Skin detection
+[02:42.14.780]      Skin selected:
+[02:42.14.780]      Set Application Title
+[02:42.14.791]      - Cygwin1.dll not detected in running applications.
+[02:42.14.791]      
+[02:42.14.791]      Process list:  NVDisplay.Container.exe, igfxCUIService.exe, PulseSecureService.exe, wlanext.exe, PulseSecureService.exe, AdminService.exe, mDNSResponder.exe, CCDMonitorService.exe, dasHost.exe, LMSvc.exe, ccd.exe, nvcontainer.exe, NvTelemetryContainer.exe, RichVideo.exe, MsMpEng.exe, NisSrv.exe, alg.exe, PresentationFontCache.exe, SearchIndexer.exe, QASvc.exe, GoogleCrashHandler.exe, GoogleCrashHandler64.exe, dllhost.exe, ePowerSvc.exe, RMSvc.exe, GamesAppIntegrationService.exe, jhi_service.exe, LMS.exe, wmpnetwk.exe, WmiPrvSE.exe, NVDisplay.Container.exe, \Device\HarddiskVolume4\Windows\System32\taskhostex.exe, \Device\HarddiskVolume4\Users\¨f∞•\AppData\Local\SweetLabs App Platform\Engine\ServiceHostAppUpdater.exe, C:\Program Files (x86)\NVIDIA Corporation\NvContainer\nvcontainer.exe, C:\Program Files (x86)\NVIDIA Corporation\NvContainer\nvcontainer.exe, \Device\HarddiskVolume4\Windows\System32\InputMethod\CHT\ChtIME.exe, \Device\HarddiskVolume4\Windows\System32\igfxEM.exe, \Device\HarddiskVolume4\Windows\System32\igfxHK.exe, \Device\HarddiskVolume4\Windows\System32\SkyDrive.exe, C:\Program Files (x86)\NVIDIA Corporation\NvNode\NVIDIA Web Helper.exe, QAEvent.exe, unsecapp.exe, LMEvent.exe, LMLockHandler.exe, unsecapp.exe, unsecapp.exe, LMTray.exe, QAMsg.exe, \Device\HarddiskVolume4\Program Files\Dolby Digital Plus\ddp.exe, \Device\HarddiskVolume4\Program Files\Realtek\Audio\HDA\RAVCpl64.exe, \Device\HarddiskVolume4\Program Files\Realtek\Audio\HDA\RAVBg64.exe, C:\Program Files (x86)\Acer\Acer Portal\AcerPortal.exe, C:\Users\¨f∞•\AppData\Local\Gaijin\Program Files (x86)\NetAgent\gjagent.exe, \Device\HarddiskVolume6\≥n≈È\SolidWorks Corp\SolidWorks\sldworks_fs.exe, \Device\HarddiskVolume4\Windows\System32\SettingSyncHost.exe, \Device\HarddiskVolume4\Program Files\Acer\Acer Power Management\ePowerTray.exe, \Device\HarddiskVolume4\Windows\System32\igfxext.exe, \Device\HarddiskVolume4\Windows\System32\wbem\unsecapp.exe, ePowerEvent.exe, C:\Program Files\Acer\Acer Power Management\ePowerWinMonitor.exe, nvsphelper64.exe, C:\Program Files (x86)\NVIDIA Corporation\NVIDIA GeForce Experience\NVIDIA Share.exe, C:\Program Files (x86)\NVIDIA Corporation\NVIDIA GeForce Experience\NVIDIA Share.exe, C:\Program Files (x86)\NVIDIA Corporation\NVIDIA GeForce Experience\NVIDIA Share.exe, C:\Program Files (x86)\Acer\abDocs\abDocsDllLoaderMonitor.exe, C:\Program Files (x86)\Acer\AOP Framework\BackgroundAgent.exe, C:\Program Files (x86)\Acer\abDocs\abDocsDllLoader.exe, audiodg.exe, C:\Users\¨f∞•\AppData\Local\Discord\app-0.0.301\Discord.exe, C:\Users\¨f∞•\AppData\Local\Discord\app-0.0.301\Discord.exe, C:\Users\¨f∞•\AppData\Local\Discord\app-0.0.301\Discord.exe, C:\Users\¨f∞•\AppData\Local\Discord\app-0.0.301\Discord.exe, MpCmdRun.exe, \Device\HarddiskVolume4\Program Files\Realtek\Audio\HDA\FMAPP.exe, D:\≥n≈È\arduino new\Arduino\java\bin\javaw.exe, \Device\HarddiskVolume4\Windows\System32\RuntimeBroker.exe, \Device\HarddiskVolume4\Program Files\WindowsApps\Microsoft.BingMaps_2.1.3230.2048_x64__8wekyb3d8bbwe\Map.exe, C:\Users\¨f∞•\Desktop\control\MobaXterm_Personal_10.5.exe, SearchProtocolHost.exe, SearchFilterHost.exe, C:\Users\¨f∞•\Desktop\control\MobaXterm_Personal_10.5.exe
+[02:42.14.791]      
+[02:42.14.810]      BEGIN ReadCustomIcons
+[02:42.14.810]          No custom icon found.
+[02:42.14.810]      END ReadCustomIcons
+[02:42.14.810]      Generating icons list (size 16)
+[02:42.14.941]      Generating icons list (size 22)
+[02:42.15.111]      Generating icons list (size 64)
+[02:42.15.178]  END Form1.Create
+[02:42.15.178]  
+[02:42.15.178]  
+[02:42.15.178]  CREATING Form4
+[02:42.15.261]  BEGIN Form4.Create
+[02:42.15.262]      BEGIN Form4.AdapterDPI
+[02:42.15.262]          Form4.AdapterDPI: DPI=120
+[02:42.15.288]          Form4.AdapterDPI: Affectation des fontes
+[02:42.15.298]      END Form4.AdapterDPI
+[02:42.15.301]      NbPingus = 4
+[02:42.15.302]      BEGIN LoadBookmarksFromIni
+[02:42.15.302]          FindOrCreateTreeFolders() (1)
+[02:42.15.305]      END LoadBookmarksFromIni
+[02:42.15.305]      BEGIN LoadMacrosFromIni
+[02:42.15.306]      END LoadMacrosFromIni
+[02:42.15.307]      Form4Create1
+[02:42.15.307]      Form4Create2
+[02:42.15.311]      BEGIN AdaptSidebarArrows
+[02:42.15.311]      END AdaptSidebarArrows
+[02:42.15.312]      Form4Create3
+[02:42.15.312]      GetMinWidth = 1148
+[02:42.15.312]      GetMinHeight = 691
+[02:42.15.314]      Form4Create4
+[02:42.15.314]      IsNTFS(C:\) --> NTFS
+[02:42.15.314]      Slash drive is NTFS.
+[02:42.15.314]      Form4Create5
+[02:42.15.315]      Form4Create6
+[02:42.15.315]      Displaysidebarontheleft1Click: FormClick
+[02:42.15.316]      BEGIN AdaptSidebarArrows
+[02:42.15.316]      END AdaptSidebarArrows
+[02:42.15.316]      Form4Create7
+[02:42.15.316]      Form4Create8
+[02:42.15.316]      Form4Create9
+[02:42.15.316]      ShowButtonsbar1Click: FormClick
+[02:42.15.316]      Form4Create10
+[02:42.15.316]      Form4Create12
+[02:42.15.316]      SmallButtons1Click: FormClick
+[02:42.15.317]      GetMinWidth = 1148
+[02:42.15.317]      GetMinHeight = 675
+[02:42.15.318]      Form4Create13
+[02:42.15.318]      Form4Create14
+[02:42.15.318]  END Form4.Create
+[02:42.15.318]  
+[02:42.15.318]  
+[02:42.15.318]  CREATING FormParams
+[02:42.15.548]  BEGIN TFormParams.FormCreate
+[02:42.15.578]  END TFormParams.FormCreate
+[02:42.15.578]  
+[02:42.15.578]  
+[02:42.15.578]  CREATING FormSessionEdit
+[02:42.15.898]  BEGIN FormSessionEdit.Create
+[02:42.15.934]      BEGIN TFormSessionEdit.FindIP
+[02:42.15.944]      END TFormSessionEdit.FindIP
+[02:42.15.944]      BEGIN SetupEnumAvailableComPorts
+[02:42.15.944]          SetupEnumAvailableComPorts: SetupDiClassGuidsFromName
+[02:42.15.946]          SetupEnumAvailableComPorts: SetupDiGetClassDevs
+[02:42.15.947]          SetupEnumAvailableComPorts: SetupDiEnumDeviceInfo
+[02:42.15.947]          SetupEnumAvailableComPorts: SetupDiDestroyDeviceInfoList
+[02:42.15.947]      END SetupEnumAvailableComPorts
+[02:42.16.007]  END FormSessionEdit.Create
+[02:42.16.007]  
+[02:42.16.007]  
+[02:42.16.008]  CREATING FormTransparente
+[02:42.16.010]  
+[02:42.16.010]  
+[02:42.16.011]  CREATING FormHotKeys
+[02:42.16.031]  BEGIN TFormHotKeys.FormCreate
+[02:42.16.036]  END TFormHotKeys.FormCreate
+[02:42.16.036]  
+[02:42.16.037]  
+[02:42.16.037]  CREATING FormDownloadBloquant
+[02:42.16.042]  
+[02:42.16.042]  
+[02:42.16.042]  CREATING FormStorePasswords
+[02:42.16.050]  
+[02:42.16.050]  
+[02:42.16.050]  CREATING FormInputDialog
+[02:42.16.054]  
+[02:42.16.054]  
+[02:42.16.054]  CREATING FormMsgDialog
+[02:42.16.059]  
+[02:42.16.059]  
+[02:42.16.059]  CREATING FormSyntax
+[02:42.16.081]  
+[02:42.16.081]  
+[02:42.16.082]  CREATING FormMasterPassword
+[02:42.16.089]  
+[02:42.16.089]  
+[02:42.16.090]  CREATING FormTermConfirmClose
+[02:42.16.094]  
+[02:42.16.094]  
+[02:42.16.094]  CREATING FormManagePasswords
+[02:42.16.102]  BEGIN TFormManagePasswords.FormCreate
+[02:42.16.103]  END TFormManagePasswords.FormCreate
+[02:42.16.103]  
+[02:42.16.104]  
+[02:42.16.104]  DONE CREATING FORMS
+[02:42.16.104]  
+[02:42.16.104]  
+[02:42.16.104]  
+[02:42.16.104]  
+[02:42.16.104]  BEGIN Form1.Show
+[02:42.16.104]  END Form1.Show
+[02:42.16.120]  
+[02:42.16.120]  Launching Form1.Timer1Timer
+[02:42.16.120]  
+[02:42.16.120]  
+[02:42.16.120]  
+[02:42.16.120]  
+[02:42.16.120]  ================================================================================
+[02:42.16.121]  ~    INI file content (C:\Users\¨f∞•\Desktop\control\MobaXterm.ini)    ~
+[02:42.16.121]  ================================================================================
+[02:42.16.121]  
+[02:42.16.121]  
+[WindowPos_ANDYSER_1_1536]
+CompactMode=0
+MonitorCount=1
+Left=122
+Top=66
+Width=924
+Height=529
+Maximized=0
+SidebarVisible=1
+SidebarWidth=240
+
+[Display]
+SidebarRight=0
+C10Checked=1
+C11Checked=1
+C12Checked=1
+C13Checked=0
+C14Checked=0
+VisibleTabNum=1
+VisibleTabClose=1
+MenuAndButtons=2
+BtnType2=2
+
+[SSH]
+SFTPShowDotFiles=1
+SFTPAsciiMode=0
+BrowserSortType=0
+BrowserSortReverse=0
+
+[Misc]
+LastSession=192.168.1.190 (control)|#109#0%192.168.1.190%22%control%%-1%-1%%%22%%0%0%0%%%-1%0%0%0%%1080%%0%0%1#MobaFont%10%0%0%0%15%236,236,236%0,0,0%180,180,192%0%-1%0%%xterm%-1%0%0,0,0%54,54,54%255,96,96%255,128,128%96,255,96%128,255,128%255,255,54%255,255,128%96,96,255%128,128,255%255,54,255%255,128,255%54,255,255%128,255,255%236,236,236%255,255,255%80%24%0%1%-1%<none>%%0#0#
+SessionP=67062329160
+SeenTFTPDaemonWarning=1
+
+[Recently started]
+16=
+15=
+14=
+13=
+12=
+11=
+10=
+9=
+8=
+7=
+6=
+5=
+4=192.168.0.11 (control)
+3=140.114.19.30
+2=140.114.19.30 (wenchun)
+1=192.168.1.190 (control)
+
+[WindowPos_ANDYSER_1_1920]
+CompactMode=0
+MonitorCount=1
+Left=244
+Top=76
+Width=1387
+Height=691
+Maximized=0
+SidebarVisible=1
+SidebarWidth=300
+
+[WindowPos_ANDYSER_2_2400]
+CompactMode=0
+MonitorCount=2
+Left=864
+Top=231
+Width=1148
+Height=691
+Maximized=0
+SidebarVisible=1
+SidebarWidth=300
+
+[WindowPos_ANDYSER_2_1920]
+CompactMode=0
+MonitorCount=2
+Left=152
+Top=83
+Width=924
+Height=529
+Maximized=0
+SidebarVisible=1
+SidebarWidth=240
+
+[Bookmarks]
+SubRep=
+ImgNum=42
+140.114.19.30 (wenchun)=#109#0%140.114.19.30%22%wenchun%%-1%-1%%%22%%0%0%0%%%-1%0%0%0%%1080%%0%0%1#MobaFont%10%0%0%0%15%236,236,236%0,0,0%180,180,192%0%-1%0%%xterm%-1%0%0,0,0%54,54,54%255,96,96%255,128,128%96,255,96%128,255,128%255,255,54%255,255,128%96,96,255%128,128,255%255,54,255%255,128,255%54,255,255%128,255,255%236,236,236%255,255,255%80%24%0%1%-1%<none>%%0#0#
+192.168.0.11 (control)=#109#0%192.168.0.11%22%control%%-1%-1%%%22%%0%0%0%%%-1%0%0%0%%1080%%0%0%1#MobaFont%10%0%0%0%15%236,236,236%0,0,0%180,180,192%0%-1%0%%xterm%-1%0%0,0,0%54,54,54%255,96,96%255,128,128%96,255,96%128,255,128%255,255,54%255,255,128%96,96,255%128,128,255%255,54,255%255,128,255%54,255,255%128,255,255%236,236,236%255,255,255%80%24%0%1%-1%<none>%%0#0#
+192.168.1.190 (control)=#109#0%192.168.1.190%22%control%%-1%-1%%%22%%0%0%0%%%-1%0%0%0%%1080%%0%0%1#MobaFont%10%0%0%0%15%236,236,236%0,0,0%180,180,192%0%-1%0%%xterm%-1%0%0,0,0%54,54,54%255,96,96%255,128,128%96,255,96%128,255,128%255,255,54%255,255,128%96,96,255%128,128,255%255,54,255%255,128,255%54,255,255%128,255,255%236,236,236%255,255,255%80%24%0%1%-1%<none>%%0#0#
+
+[EditorWindowPos]
+Left=-1920
+Top=178
+Width=768
+Height=832
+Maximized=0
+MonitorCount=2
+
+[LastInstanceSessions]
+0=192.168.1.190 (control)
+
+[02:42.16.126]  
+[02:42.16.126]  
+[02:42.16.126]  ================================================================================
+[02:42.16.126]  
+[02:42.16.126]  
+[02:42.16.126]  
+[02:42.16.126]  
+[02:42.16.127]  BEGIN CreerFstab
+[02:42.16.127]      CreerFstab: RootDirectory = C:/Users/?èÈ?/AppData/Local/Temp/Mxt105
+[02:42.16.128]      CreerFstab: HomeDirectory = C:/Users/?èÈ?/AppData/Local/Temp/Mxt105/tmp/home_f
+[02:42.16.129]  END CreerFstab
+[02:42.16.129]  BEGIN extraireFichiers1
+[02:42.16.129]      BEGIN CreerProfile
+[02:42.16.130]      END CreerProfile
+[02:42.16.131]      BEGIN CreerSshConfig
+[02:42.16.134]      END CreerSshConfig
+[02:42.16.134]      BEGIN CreerBaseProfile
+[02:42.16.144]          NEW PLUGIN: mobase
+[02:42.16.144]          BEGIN ProcessPlugin(mobase)
+[02:42.16.146]          END ProcessPlugin(mobase)
+[02:42.16.180]      END CreerBaseProfile
+[02:42.16.180]      BEGIN MkGroupFile
+[02:42.16.181]          BEGIN GetLocalGroups
+[02:42.16.183]          END GetLocalGroups
+[02:42.16.186]          SaveStringListToUnixFile(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\group)
+[02:42.16.189]          MkGroupFile OK
+[02:42.16.189]      END MkGroupFile
+[02:42.16.189]      BEGIN MkPasswdFile
+[02:42.16.189]          Current Domain: ANDYSER
+[02:42.16.189]          BEGIN Bui_GetWindowsUsersAccount
+[02:42.16.189]          END Bui_GetWindowsUsersAccount
+[02:42.16.194]          MkPasswdFile OK
+[02:42.16.194]      END MkPasswdFile
+[02:42.16.194]      BEGIN CreerNsswitch
+[02:42.16.195]      END CreerNsswitch
+[02:42.16.196]      Request for file extraction: /bin/scrdaemons
+[02:42.16.196]      CreateSymbolicLink(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\scrdaemons, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\init.d\tftp);
+[02:42.16.197]      !!!! Exception EFCreateError: Cannot create file "C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\init.d\tftp". ®t≤Œß‰§£®Ï´¸©w™∫∏ÙÆ|°C during CreerLienSymb2
+[02:42.16.197]      CreateSymbolicLink(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\scrdaemons, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\init.d\ftp);
+[02:42.16.197]      !!!! Exception EFCreateError: Cannot create file "C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\init.d\ftp". ®t≤Œß‰§£®Ï´¸©w™∫∏ÙÆ|°C during CreerLienSymb2
+[02:42.16.197]      CreateSymbolicLink(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\scrdaemons, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\init.d\http);
+[02:42.16.197]      !!!! Exception EFCreateError: Cannot create file "C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\init.d\http". ®t≤Œß‰§£®Ï´¸©w™∫∏ÙÆ|°C during CreerLienSymb2
+[02:42.16.197]      CreateSymbolicLink(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\scrdaemons, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\init.d\ssh);
+[02:42.16.198]      !!!! Exception EFCreateError: Cannot create file "C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\init.d\ssh". ®t≤Œß‰§£®Ï´¸©w™∫∏ÙÆ|°C during CreerLienSymb2
+[02:42.16.198]      CreateSymbolicLink(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\scrdaemons, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\init.d\telnet);
+[02:42.16.198]      !!!! Exception EFCreateError: Cannot create file "C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\init.d\telnet". ®t≤Œß‰§£®Ï´¸©w™∫∏ÙÆ|°C during CreerLienSymb2
+[02:42.16.198]      CreateSymbolicLink(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\scrdaemons, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\init.d\nfs);
+[02:42.16.198]      !!!! Exception EFCreateError: Cannot create file "C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\init.d\nfs". ®t≤Œß‰§£®Ï´¸©w™∫∏ÙÆ|°C during CreerLienSymb2
+[02:42.16.198]      CreateSymbolicLink(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\scrdaemons, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\init.d\vnc);
+[02:42.16.198]      !!!! Exception EFCreateError: Cannot create file "C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\init.d\vnc". ®t≤Œß‰§£®Ï´¸©w™∫∏ÙÆ|°C during CreerLienSymb2
+[02:42.16.199]      Request for file extraction: /bin/cygtermd.exe
+[02:42.16.200]      Request for file extraction: /bin/cygz.dll
+[02:42.16.201]      Request for file extraction: /bin/cyggcc_s-1.dll
+[02:42.16.201]      Request for file extraction: /bin/cygwin-console-helper.exe
+[02:42.16.202]      Request for file extraction: /bin/ssh.exe
+[02:42.16.203]      Request for file extraction: /etc/bash.bash_logout
+[02:42.16.203]      Request for file extraction: /etc/profile.d
+[02:42.16.204]      Request for file extraction: /etc/profile.d/*
+[02:42.16.204]      CreerRaccourciVersMobaXterm(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\MobaListPorts, -listports);
+[02:42.16.204]      !!!! Exception EFCreateError: Cannot create file "C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\MobaListPorts". ®t≤Œß‰§£®Ï´¸©w™∫∏ÙÆ|°C during CreerRaccourciVersMobaXterm
+[02:42.16.204]      CreerRaccourciVersMobaXterm(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\MobaPictureViewer, -picview);
+[02:42.16.204]      !!!! Exception EFCreateError: Cannot create file "C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\MobaPictureViewer". ®t≤Œß‰§£®Ï´¸©w™∫∏ÙÆ|°C during CreerRaccourciVersMobaXterm
+[02:42.16.204]      CreerRaccourciVersMobaXterm(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\MobaCalc, -calc);
+[02:42.16.204]      !!!! Exception EFCreateError: Cannot create file "C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\MobaCalc". ®t≤Œß‰§£®Ï´¸©w™∫∏ÙÆ|°C during CreerRaccourciVersMobaXterm
+[02:42.16.204]      CreerRaccourciVersMobaXterm(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\MobaTextEditor, -edit);
+[02:42.16.205]      !!!! Exception EFCreateError: Cannot create file "C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\MobaTextEditor". ®t≤Œß‰§£®Ï´¸©w™∫∏ÙÆ|°C during CreerRaccourciVersMobaXterm
+[02:42.16.205]      CreerRaccourciVersMobaXterm(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\MobaCompareFiles, -compfiles);
+[02:42.16.205]      !!!! Exception EFCreateError: Cannot create file "C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\MobaCompareFiles". ®t≤Œß‰§£®Ï´¸©w™∫∏ÙÆ|°C during CreerRaccourciVersMobaXterm
+[02:42.16.205]      CreerRaccourciVersMobaXterm(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\MobaCompareFolders, -compfolders);
+[02:42.16.205]      !!!! Exception EFCreateError: Cannot create file "C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\MobaCompareFolders". ®t≤Œß‰§£®Ï´¸©w™∫∏ÙÆ|°C during CreerRaccourciVersMobaXterm
+[02:42.16.206]      Request for file extraction: /usr/share/terminfo/78/xterm
+[02:42.16.206]      Request for file extraction: /usr/share/terminfo/63/cygwin
+[02:42.16.207]      Request for file extraction: /etc/bash_completion
+[02:42.16.208]      Request for file extraction: /usr/share/zoneinfo/posixrules
+[02:42.16.208]      File posixrules extracted successfully.
+[02:42.16.208]      Request for file extraction: /etc/inputrc
+[02:42.16.208]  END extraireFichiers1
+[02:42.16.209]  CreateSymbolicLink(/proc/registry, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\registry);
+[02:42.16.210]  CreateSymbolicLink(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\bash.exe, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\sh);
+[02:42.16.211]  !!!! Exception EFCreateError: Cannot create file "C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\bin\sh". ®t≤Œß‰§£®Ï´¸©w™∫∏ÙÆ|°C during CreerLienSymb2
+[02:42.16.230]  CreateSymbolicLink(C:\Windows\system32\drivers\etc\hosts, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\hosts);
+[02:42.16.235]  CreateSymbolicLink(C:\Windows\system32\drivers\etc\networks, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\networks);
+[02:42.16.239]  CreateSymbolicLink(C:\Windows\system32\drivers\etc\protocol, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\protocol);
+[02:42.16.241]  CreateSymbolicLink(C:\Windows\system32\drivers\etc\services, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\etc\services);
+[02:42.16.245]  CreateSymbolicLink(C:\Users\¨f∞•\Desktop\, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\tmp\home_f\Desktop);
+[02:42.16.247]  CreateSymbolicLink(C:\Users\¨f∞•\DOCUME~1\, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\tmp\home_f\MyDocuments);
+[02:42.16.249]  CreateSymbolicLink(C:\Users\¨f∞•\Desktop\control\, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\tmp\home_f\LauncherFolder);
+[02:42.16.251]  CreateSymbolicLink(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\drives, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\cygdrive);
+[02:42.16.252]  CreateSymbolicLink(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\drives, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\mnt);
+[02:42.16.254]  CreateSymbolicLink(C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\drives, C:\Users\¨f∞•\AppData\Local\Temp\Mxt105\media);
+[02:42.16.256]  BEGIN LoadSharedSessions
+[02:42.16.256]      BEGIN TFormManagePasswords.sRadioButton4Click
+[02:42.16.256]      END TFormManagePasswords.sRadioButton4Click
+[02:42.16.256]  END LoadSharedSessions
+[02:42.16.256]  BEGIN LoadSharedSessions
+[02:42.16.256]  END LoadSharedSessions
+[02:42.16.258]  BEGIN RecreateBookmarksMenus
+[02:42.16.258]      RecreateBookmarksMenus: FreeBookmarksMenuItems(Form1.Xserver3)
+[02:42.16.258]      RecreateBookmarksMenus: FreeBookmarksMenuItems(Bookmarks1)
+[02:42.16.258]      sTreeView1.assign(Treesessions)
+[02:42.16.259]      Detecting SheetSessions width
+[02:42.16.259]      Create session menu items
+[02:42.16.263]      Create aliases
+[02:42.16.264]      TreeSessions.Expand
+[02:42.16.264]  END RecreateBookmarksMenus
+[02:42.16.265]  !!!! EXCEPTION EInOutError:  File not found
