@@ -43,7 +43,7 @@ void ReceiveData(int interval_receive) {
           pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
         }
         state = 0;
-        pos_count = 0.1;
+        pos_count = 0.08;
       }
       else if (val == '-') {
         if (state == 1) {
@@ -58,7 +58,7 @@ void ReceiveData(int interval_receive) {
           pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
         }
         state = 0;
-        pos_count = -0.1;
+        pos_count = -0.08;
       }
       else if (val == 'R') {
         if (state == 1) {
@@ -120,7 +120,7 @@ void ReceiveData(int interval_receive) {
     }
   }
   //rpi connection
-  if ((millis() - piTimer) > 1000) {
+  if ((millis() - piTimer) > 300) {
     pi_data[0] = 1;
     Wire.beginTransmission(9); // transmit to device #9
     Wire.write(1);           // sends 16 bytes
@@ -131,7 +131,9 @@ void ReceiveData(int interval_receive) {
       // pi_data[2] = Wire.read();
     }
     Wire.endTransmission();    // stop transmitting
-    control(pi_data[0]);
+    if(pi_data[0]!=pi_data[1])
+      control(pi_data[0]);
+    pi_data[1]=pi_data[0];
     //Serial.print(pi_data[0]);
     Serial.println(pi_data[0]);
     Serial.println(10);
@@ -157,7 +159,7 @@ void control(char val)
       pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
     }
     state = 0;
-    pos_count = 0.1;
+    pos_count = 0.08;
   }
   else if (val == '-') {
     if (state == 1) {
@@ -172,7 +174,7 @@ void control(char val)
       pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
     }
     state = 0;
-    pos_count = -0.1;
+    pos_count = -0.08;
   }
   else if (val == 'R') {
     if (state == 1) {
