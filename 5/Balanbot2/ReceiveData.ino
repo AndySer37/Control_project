@@ -33,41 +33,32 @@ void ReceiveData(int interval_receive) {
       else if (val == '+') {
         if (state == 1) {
           pos = tempPos / -17, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //pos = (pos_L + pos_R ) / 2,pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
-
+          KA_P = 17;
           Et_total = 0;
-          //          KA_P = 17;
-          //          KA_I = 130;
-          //          KA_D = 0.3;
-          //          KP_P = 1.3;
-          KA_P = 28;
-          KA_I = 200;
-          KA_D = 0.4;
-          KP_P = 1.6;
+          KA_I = 130;
+          KA_D = 0.3;
+          KP_P = 1.3;
         }
         else if (state == 0) {
           pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
         }
         state = 0;
-        pos_count = 0.1;
+        pos_count = 0.15;
       }
       else if (val == '-') {
         if (state == 1) {
           pos = tempPos / -17, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
+          KA_P = 17;
           Et_total = 0;
-          //KA_P = 17;
-//          KA_I = 130;
-//          KA_D = 0.3;
-//          KP_P = 1.3;
-          KA_P = 28;
-          KA_I = 200;
-          KA_D = 0.4;
-          KP_P = 1.6;
+          KA_I = 130;
+          KA_D = 0.3;
+          KP_P = 1.3;
         }
         else if (state == 0) {
           pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
         }
         state = 0;
-        pos_count = -0.1;
+        pos_count = -0.15;
       }
       else if (val == 'R') {
         if (state == 1) {
@@ -75,14 +66,10 @@ void ReceiveData(int interval_receive) {
         }
         else if (state == 0) {
           pos_it = 0, pos_L = pos, pos_R = pos, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
-//          KA_P = 14;
-//          KA_I = 110;
-//          KA_D = 0.2;
-//          KP_P = 1.5;
-          KA_P = 21;
-          KA_I = 158;
-          KA_D = 0.4;
-          KP_P = 1.4;
+          KA_P = 14;
+          KA_I = 110;
+          KA_D = 0.2;
+          KP_P = 1.5;
         }
         state = 1;
         //trun_Radius = -8;
@@ -94,14 +81,10 @@ void ReceiveData(int interval_receive) {
         }
         else if (state == 0) {
           pos_it = 0, pos_L = pos, pos_R = pos, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
-          KA_P = 21;
-          KA_I = 158;
-          KA_D = 0.4;
-          KP_P = 1.4;
-          //          KA_P = 14;
-//          KA_I = 110;
-//          KA_D = 0.2;
-//          KP_P = 1.5;
+          KA_P = 14;
+          KA_I = 110;
+          KA_D = 0.2;
+          KP_P = 1.5;
         }
         state = 1;
         //trun_Radius = 8;
@@ -110,14 +93,10 @@ void ReceiveData(int interval_receive) {
       else if (val == 'S') {
         if (state == 1) {
           pos = tempPos / -17, Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; Et_total = 0; //pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
-         // KA_P = 17;
-//          KA_I = 130;
-//          KA_D = 0.3;
-//          KP_P = 1.3;
-          KA_P = 28;
-          KA_I = 200;
-          KA_D = 0.4;
-          KP_P = 1.6;
+          KA_P = 17;
+          KA_I = 130;
+          KA_D = 0.3;
+          KP_P = 1.3;
         }
         else if (state == 0) {
           pos_it = 0, pos_itL = 0, pos_itR = 0,  Et_wheel = 0, encoderPosR = 0, encoderPosL = 0, encoderL_past = 0, encoderR_past = 0; //Et_total = 0;pos = 0;Et_wheel = 0;encoderPosR = 0;encoderPosL = 0;
