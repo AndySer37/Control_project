@@ -1,7 +1,7 @@
 void Path_control()
 {
   path++;
-  //1300//475//4150 
+  //1300//475//4150
   if (path == 1)
     control('S');
   else if (path == 500)
@@ -24,7 +24,7 @@ void Path_control()
     control('+');
   else if (path == 6100)
     control('S');
-  else if (path == 6300) 
+  else if (path == 6300)
     control('r');
   else if (path == 6775)
     control('S');
@@ -36,11 +36,8 @@ void Path_control()
     control('r');
   else if (path == 8600)
     control('S');
-  else if (path == 9100) 
+  else if (path == 9100)
     control('R');
   else if (path == 13250)
     control('S');
-
- */
-
 }

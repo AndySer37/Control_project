@@ -82,9 +82,6 @@ char pi_data[3];
 
 
 void setup() {
-  Serial.print(int('0'));
-  //Wire.onRequest(requestEvent); // register event
-  //Wire.onReceive(receiveEvent);
   Serial.begin(9600);
   BTSerial.begin(38400); // NANO 沒辦法同時處理兩個BT UART傳輸  //bt1
   //BTSerial2.begin(38400);   //bt2
@@ -146,7 +143,6 @@ void loop() {
   {
     if (UpdateAttitude())
     {
-      //Wire.begin(0x04);
       DataAvg[2] = DataAvg[1];
       DataAvg[1] = DataAvg[0];
       DataAvg[0] = Angle_Car;
