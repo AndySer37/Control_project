@@ -69,7 +69,7 @@ void ReceiveData(int interval_receive) {
           KA_P = 20;
           KA_I = 160;
           KA_D = 0.4;
-          KP_P = 1.3;
+          KP_P = 1.5;
         }
         state = 1;
         //trun_Radius = -8;
@@ -84,7 +84,7 @@ void ReceiveData(int interval_receive) {
           KA_P = 20;
           KA_I = 160;
           KA_D = 0.4;
-          KP_P = 1.3;
+          KP_P = 1.5;
         }
         state = 1;
         //trun_Radius = 8;
@@ -185,7 +185,7 @@ void control(char val)
       KA_P = 20;
       KA_I = 160;
       KA_D = 0.4;
-      KP_P = 1.3;
+      KP_P = 1.5;
     }
     state = 1;
     //trun_Radius = -8;
@@ -200,7 +200,7 @@ void control(char val)
       KA_P = 20;
       KA_I = 160;
       KA_D = 0.4;
-      KP_P = 1.3;
+      KP_P = 1.5;
     }
     state = 1;
     //trun_Radius = 8;
@@ -215,7 +215,7 @@ void control(char val)
       KA_P = 20;
       KA_I = 160;
       KA_D = 0.4;
-      KP_P = 1.3;
+      KP_P = 1.5;
     }
     state = 1;
     trun_Radius = 0;
@@ -230,7 +230,7 @@ void control(char val)
       KA_P = 20;
       KA_I = 160;
       KA_D = 0.4;
-      KP_P = 1.3;
+      KP_P = 1.5;
     }
     state = 1;
     trun_Radius = 0;
